@@ -1,0 +1,54 @@
+@use "../utils" as *;
+
+.navigation {
+  height: 100vh;
+  width: rem(230);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: rem(45);
+  gap: rem(120);
+  background: $very-light-blue;
+
+  &__logo {
+    font-size: rem(14);
+    color: $orange;
+
+    span {
+      color: $gray-text-4;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(25);
+
+    &__list {
+      color: $gray-button-text;
+
+      a {
+        letter-spacing: ren(0.235);
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $gray-text-4;
+          font-weight: 700;
+          position: relative;
+          //   letter-spacing: rem(0);
+
+          &::after {
+            position: absolute;
+            content: "";
+            height: rem(3);
+            width: 100%;
+            left: 0;
+            background: $orange;
+          }
+        }
+      }
+    }
+  }
+}

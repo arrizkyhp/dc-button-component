@@ -1,0 +1,75 @@
+@use "../utils" as *;
+
+.btn {
+  @include button-default();
+
+  &.color {
+    @include button-default();
+  }
+
+  &.btn-hover,
+  &:hover {
+    background-color: $mid-gray;
+  }
+
+  &.btn-outline {
+    background-color: $white;
+    box-shadow: none;
+    border: rem(1) solid $blue;
+    color: $blue;
+
+    &.btn-hover,
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+
+  &.btn-text {
+    background-color: $white;
+    box-shadow: none;
+    color: $blue;
+    padding: 0;
+
+    &.btn-hover {
+      background-color: $light-blue;
+      padding: rem(8) rem(16);
+    }
+
+    &.disabled {
+      color: $gray-button-text;
+    }
+  }
+
+  &.btn-no-shadow {
+    box-shadow: none;
+
+    &.btn-primary {
+      box-shadow: none;
+    }
+  }
+
+  &.btn-primary {
+    background-color: $blue;
+    color: $white;
+    box-shadow: $base-box-shadow-blue;
+
+    &.btn-hover,
+    &:hover {
+      background-color: $darker-blue;
+    }
+  }
+
+  &.btn-disabled {
+    pointer-events: none;
+    color: $gray-button-text;
+  }
+
+  &.btn-icon {
+    display: flex;
+    gap: rem(10);
+    align-items: center;
+    span {
+      font-size: rem(14);
+    }
+  }
+}

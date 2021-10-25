@@ -1,0 +1,51 @@
+@use "../utils" as *;
+
+.button-page {
+  position: relative;
+  margin-left: rem(90);
+  margin-top: rem(50);
+
+  &__title {
+    color: $gray-text-2;
+    margin-bottom: rem(28);
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(45);
+
+    &.btn-variant {
+      @include max-width(rem(332));
+    }
+
+    &.btn-disabled {
+      @include max-width(rem(443));
+    }
+
+    &.btn-icon-area {
+      @include max-width(rem(572));
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: rem(12);
+      align-items: start;
+
+      .button-text {
+        font-size: rem(12);
+        color: $gray-text-1;
+        font-family: $base-font-ubuntu;
+
+        &__hover {
+          color: $gray-text-3;
+        }
+
+        &.text {
+          margin-bottom: rem(8);
+        }
+      }
+    }
+  }
+}
