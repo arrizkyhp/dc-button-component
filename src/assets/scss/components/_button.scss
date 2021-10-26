@@ -59,6 +59,35 @@
     }
   }
 
+  &.btn-default {
+    @include button-default();
+
+    &.btn-hover,
+    &:hover {
+      background-color: $mid-gray;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $dark-gray;
+    color: $white;
+
+    &.btn-hover,
+    &:hover {
+      background-color: $very-dark-gray;
+    }
+  }
+
+  &.btn-danger {
+    background-color: $soft-red;
+    color: $white;
+
+    &.btn-hover,
+    &:hover {
+      background-color: $red;
+    }
+  }
+
   &.btn-disabled {
     pointer-events: none;
     color: $gray-button-text;
@@ -71,5 +100,17 @@
     span {
       font-size: rem(14);
     }
+  }
+
+  &.btn-sm {
+    padding: rem(6) rem(12);
+  }
+
+  &.btn-md {
+    padding: rem(8) rem(16);
+  }
+
+  &.btn-lg {
+    padding: rem(11) rem(22);
   }
 }
